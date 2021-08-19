@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>OblakoGroup</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="./main.js" type="script">
+</head>
+<body>
+  <header class="header">
+      <div class="header__nav"><img class="nav__img" src="./assets/Shape.png"></div>
+      <div class="header__plan">+ Запланировать</div>
+      <div class="blur"></div>
+      <div class="block-plan">
+        <div class="plan-header">
+          <div class="plan-header-title">Планирование</div>
+          <div class="plan-header-accept"><img src="./assets/plan_accept_icon.png"></div>
+          <div class="plan-header-close"><img src="assets/plan_close_icon.png"></div>
+        </div>
+      <div class="plan-tabs">
+        <button class="plan-tabs_main tablinks" onclick="openTab(event, 'plan-tabs_main')">Основное</button>
+        <div class="main-content tab-content"></div>
+        <button class="plan-tabs_members tablinks" (click)="openTab(this,'plan-tab_members)">Участники</button>
+        <div class="members-content tab-content"></div>
+      </div>
+      </div>
+  </header>
+  <main class="main">
+    <div class="main-container">
+      <div class="main-container__breadcrumb">Главная - Планирование</div>
+      <span class="main-container__logo"><img src="./assets/Union.png"></span>
+      <span class="main-container__title">Планирование</span>
+      <div class="main-container__tabs">
+        <div class="main-container__tab_group">Групповые</div>
+        <div class="main-container__tab_solo">Индивидуальные</div>
+      </div>
+      <hr>
+      <div class="main-container__filter">
+        <div class="main-container__filter_search"><input type="text" placeholder="Поиск"></div>
+        <div class="main-container__filter_programm"><select name="programm" id="select-program">
+          <option value="all">Все</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select></div>
+        <div class="main-container__filter_period"><select name="period" id="select-period">
+          <option value="all">Июнь 2019</option>
+          <option value="1">Июль</option>
+          <option value="2">Агуст</option>
+          <option value="3">Сентябрь</option>
+        </select></div>
+        <div class="main-container__filter_status"><select name="period" id="select-status">
+          <option value="all">Все</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select></div>
+
+
+      </div>
+      <div class="main-container__filter-buttons">
+        <div class="main-container__filter-buttons_info">34 сессии</div>
+        <div class="main-container__filter-buttons_setfilter"><img src="./assets\set_filter_icon.png" class="set_filter_img">Настроить фильтр</div>
+        <div class="main-container__filter-buttons_clear"><img src="./assets/filter_close_icon.png" class="close_filter_img">Сбросить</div>
+      </div>
+        <div class="main-container-list">
+          <div class="main-container-list_head">
+            <div class="main-container-list_head_date">Дата начала</div>
+            <div class="main-container-list_head_name">Название</div>
+            <div class="main-container-list_head_members">Участников</div>
+            <div class="main-container-list_head_trainer">Тренер</div>
+            <div class="main-container-list_head_progress">Прогресс</div>
+          </div>
+          <div class="main-container-list-item">
+            <div class="main-container-list_date">23 дек, 9:00</div>
+            <div class="main-container-list_name">Страхование с заботой о клиенте</div>
+            <div class="main-container-list_members">12</div>
+            <div class="main-container-list_trainer"></div>
+            <div class="main-container-list_progress"> <img src="./assets/progress_icon.png" style="margin-right: 7px;">90 %</div>
+            <button class="kill-item"><img src="./assets/dots_button_icon.png" alt=""></button>
+          </div>
+          <div class="main-container-list-item">
+            <div class="main-container-list_date">14 ноя, 9:30</div>
+            <div class="main-container-list_name">Главные правила продаж</div>
+            <div class="main-container-list_members">10</div>
+            <div class="main-container-list_trainer"></div>
+            <div class="main-container-list_progress"><img src="./assets/progress_icon.png" style="margin-right: 7px;">90 %</div>
+            <button class="kill-item"><img src="./assets/dots_button_icon.png" alt=""></button>
+          </div>
+          <div class="main-container-list-item"><div class="main-container-list_date">19 окт, 14:30</div>
+          <div class="main-container-list_name">Первичное обучение КС</div>
+          <div class="main-container-list_members">8</div>
+          <div class="main-container-list_trainer"></div>
+          <div class="main-container-list_progress"><img src="./assets/progress_icon.png" style="margin-right: 7px;">86 %</div>
+          <button class="kill-item"><img src="./assets/dots_button_icon.png" alt=""></button>
+        </div>
+
+          <div class="main-container-list-item"><div class="main-container-list_date">10 окт, 16:00</div>
+            <div class="main-container-list_name">Вторичное обучение КС</div>
+            <div class="main-container-list_members">18</div>
+            <div class="main-container-list_trainer"></div>
+            <div class="main-container-list_progress"><img src="./assets/progress_icon.png" style="margin-right: 7px;">82 %</div>
+            <button class="kill-item"><img src="./assets/dots_button_icon.png" alt=""></button>
+          </div>
+
+          <div class="main-container-list-item">
+            <div class="main-container-list_date">5 окт, 15:00</div>
+            <div class="main-container-list_name">Вклады: теория и практика</div>
+            <div class="main-container-list_members">6</div>
+            <div class="main-container-list_trainer"></div>
+            <div class="main-container-list_progress"><img src="./assets/progress_icon.png" style="margin-right: 7px;">79 %</div>
+            <button class="kill-item"><img src="./assets/dots_button_icon.png" alt=""></button>
+          </div>
+
+          <div class="main-container-list-item">
+            <div class="main-container-list_date">27 сен, 11:00</div>
+            <div class="main-container-list_name">Очное обучение менеджеров</div>
+            <div class="main-container-list_members">20</div>
+            <div class="main-container-list_trainer"></div>
+            <div class="main-container-list_progress"><img src="./assets/progress_icon.png" style="margin-right: 7px;">73 %</div>
+            <button class="kill-item"><img src="./assets/dots_button_icon.png" alt=""></button>
+          </div>
+
+        </div>
+    </div>
+  </main>
+</body>
+</html>
